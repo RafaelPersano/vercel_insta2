@@ -1,0 +1,19 @@
+{
+  "name": "instastyle-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "esbuild index.tsx --bundle --outfile=public/bundle.js --loader:.ts=tsx --servedir=public --watch",
+    "build": "esbuild index.tsx --bundle --outfile=public/bundle.js --loader:.ts=tsx --minify",
+    "vercel-build": "npm run build",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.0",
+    "typescript": "^5.5.0"
+  }
+}
